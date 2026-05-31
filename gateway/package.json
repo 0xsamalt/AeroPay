@@ -1,0 +1,38 @@
+{
+  "name": "flash-rail-gateway",
+  "version": "1.0.0",
+  "description": "Flash Credit Rail Gateway - Orchestration layer for x402 payments",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test:setup": "tsx src/test/test-setup.ts",
+    "test:middleware": "tsx src/test/test-middleware.ts",
+    "test:routes": "tsx src/test/test-routes.ts",
+    "test:integration": "tsx src/test/test-integration.ts",
+    "test:real": "tsx src/test/test-real-comparison.ts",
+    "db:init": "node -e \"require('./dist/services/database').initDatabase()\"",
+    "test": "jest"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.9.0",
+    "express": "^4.18.2",
+    "framer-motion": "^12.23.26",
+    "morgan": "^1.10.0",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.10.0",
+    "@types/node-cron": "^3.0.11",
+    "tsx": "^4.21.0",
+    "typescript": "^5.3.3"
+  }
+}
