@@ -13,11 +13,11 @@ AeroPay introduces a new economic primitive for the decentralized web: **instant
 ```mermaid
 sequenceDiagram
     autonumber
-    actor User as User (Browser)
+    actor User as "User (Browser)"
     participant ClientSDK as Client SDK
-    participant Merchant as Merchant API (USDC 402)
+    participant Merchant as "Merchant API (USDC 402)"
     participant Gateway as AeroPay Gateway
-    participant Contract as AeroPayVault (Base Sepolia)
+    participant Contract as "AeroPayVault (Base Sepolia)"
 
     Note over User,Contract: 1. Setup & Deposit
     User->>Contract: Deposit USDC to Credit Vault
